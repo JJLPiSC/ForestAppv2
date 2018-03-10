@@ -10,15 +10,12 @@ import android.widget.TextView;
 
 import com.coding.jjlop.forestappv2.Model.Model;
 import com.coding.jjlop.forestappv2.R;
+import com.coding.jjlop.forestappv2.TabViewItem;
 import com.hold1.pagertabsindicator.TabViewProvider;
 
 import java.util.List;
 
-/**
- * Created by jjlop on 05/03/2018.
- */
-
-public class CustomViewPagerAdapter extends PagerAdapter implements TabViewProvider.ImageProvider{
+public class CustomViewPagerAdapter extends PagerAdapter implements TabViewProvider.CustomView{
 
     List<Model> models;
     Context context;
@@ -45,7 +42,7 @@ public class CustomViewPagerAdapter extends PagerAdapter implements TabViewProvi
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        ((ViewGroup)container).removeView((View)object);
+        (container).removeView((View)object);
     }
 
     @Override
@@ -60,7 +57,7 @@ public class CustomViewPagerAdapter extends PagerAdapter implements TabViewProvi
         return itemView;
     }
 
-    @Override
+    /*@Override
     public Uri getImageUri(int i) {
         //Link from Internet
         return null;
@@ -70,5 +67,14 @@ public class CustomViewPagerAdapter extends PagerAdapter implements TabViewProvi
     public int getImageResourceId(int i) {
         //Local Resoureces
         return models.get(i).getId();
+    }*/
+
+    @Override
+    public View getView(int i) {
+        return new TabViewItem(context,
+                models.get(i).getTitle(),
+                models.get(i).getId(),
+                0xFF363636,
+                0xFFFF0000);
     }
 }
