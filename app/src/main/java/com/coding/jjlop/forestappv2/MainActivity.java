@@ -44,15 +44,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initModel() {
-        Model model= new Model("Page 1",R.drawable.ic_autorenew_black_24dp);
+        Model model= new Model("Propios",R.drawable.ic_autorenew_black_24dp);
         models.add(model);
-        model= new Model("Page 2",R.drawable.ic_autorenew_black_24dp);
+        model= new Model("Intercambiar",R.drawable.ic_autorenew_black_24dp);
         models.add(model);
-        model= new Model("Page 3",R.drawable.ic_local_florist_black_24dp);
+        model= new Model("Plantar",R.drawable.ic_local_florist_black_24dp);
         models.add(model);
-        model= new Model("Page 4",R.drawable.ic_pin_drop_black_24dp);
+        model= new Model("Mapa",R.drawable.ic_pin_drop_black_24dp);
         models.add(model);
-        model= new Model("Page 5",R.drawable.ic_local_florist_black_24dp);
+        model= new Model("Adoptar",R.drawable.ic_local_florist_black_24dp);
         models.add(model);
     }
 
